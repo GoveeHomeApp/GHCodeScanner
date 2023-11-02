@@ -61,6 +61,9 @@ open class GHScanView: UIView {
         super.init(frame: frameTmp)
 
         backgroundColor = UIColor.clear
+        
+        self.isUserInteractionEnabled = false
+        
     }
     
     override init(frame: CGRect) {
@@ -87,7 +90,7 @@ open class GHScanView: UIView {
     
     
     // 开始扫描动画
-    func startScanAnimation() {
+    public func startScanAnimation() {
         guard !isAnimationing else {
             return
         }
@@ -118,7 +121,7 @@ open class GHScanView: UIView {
     }
     
     // 开始扫描动画
-    func stopScanAnimation() {
+    public func stopScanAnimation() {
         isAnimationing = false
         switch viewStyle.anmiationStyle {
         case .LineMove:
