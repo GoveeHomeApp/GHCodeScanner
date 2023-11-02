@@ -1,5 +1,5 @@
 //
-//  GHScanViewController.swift
+//  GHNewScanViewController.swift
 //  GHAuthManager
 //
 //  Created by songyang on 2023/10/20.
@@ -17,7 +17,7 @@ public protocol QRRectDelegate {
     func drawwed()
 }
 
-open class GHScanViewController: UIViewController {
+open class GHNewScanViewController: UIViewController {
     
     // 返回扫码结果，也可以通过继承本控制器，改写该handleCodeResult方法即可
     open weak var scanResultDelegate: GHScanViewControllerDelegate?
@@ -67,7 +67,7 @@ open class GHScanViewController: UIViewController {
     open override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         drawScanView()
-        perform(#selector(GHScanViewController.startScan), with: nil, afterDelay: 0.3)
+        perform(#selector(GHNewScanViewController.startScan), with: nil, afterDelay: 0.3)
     }
 
     @objc open func startScan() {
@@ -163,7 +163,7 @@ open class GHScanViewController: UIViewController {
 }
 
 //MARK: - 图片选择代理方法
-extension GHScanViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension GHNewScanViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //MARK: -----相册选择图片识别二维码 （条形码没有找到系统方法）
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
@@ -181,7 +181,7 @@ extension GHScanViewController: UIImagePickerControllerDelegate, UINavigationCon
 }
 
 //MARK: - 私有方法
-private extension GHScanViewController {
+private extension GHNewScanViewController {
     
     func showMsg(title: String?, message: String?) {
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
