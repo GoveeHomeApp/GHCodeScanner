@@ -18,24 +18,8 @@ Pod::Spec.new do |s|
 
   s.source_files = 'GHCodeScanner/Classes/**/*'
 
-  #- 此参数用于注册组件 -#
-  #s.info_plist = { 'GHModular' => 'GHxxxxxxx.GHxxxxxModule' }
-
-  #- 推荐这种 -#
+  # s.info_plist = { 'GHModular' => 'GHxxxxxxx.GHxxxxxModule' }
+  
   # s.resource_bundles = { 'GHCodeScanner' => ['GHCodeScanner/*.xcassets'] }
-
-  # s.resources  = 'GHCodeScanner/**/*.{storyboard,xib}', 'GHCodeScanner/Assets/*'
-  # s.resources = 'Resources/*.png'
-
-  # s.preserve_paths = 'FilesToSave', 'MoreFilesToSave'
-
-  # s.framework  = 'SomeFramework'
-  # s.frameworks = 'SomeFramework', 'AnotherFramework'
-
-  # s.library   = 'iconv'
-  # s.libraries = 'iconv', 'xml2'
-
-  # s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
-  # s.dependency 'AFNetworking'
 
 end
