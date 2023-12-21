@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = 'GHCodeScanner'
-  s.version      = '0.1.0'
+  s.version      = '0.0.0'
   s.summary      = 'GHCodeScanner.'
 
   s.homepage     = 'git@github.com:GoveeHomeApp/GHCodeScanner.git'
